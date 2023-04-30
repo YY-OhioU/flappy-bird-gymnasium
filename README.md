@@ -53,7 +53,7 @@ The RGB image of size 288, 512 pixels. The pixel values are from range [0, 255].
 </p>
 
 ## Installation
-    
+    python setup.py
 ## Usage
 
 Like with other `gymnasium` environments, it's very easy to use `flappy-bird-gymnasium`.
