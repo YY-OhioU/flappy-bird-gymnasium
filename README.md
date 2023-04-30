@@ -40,9 +40,9 @@ The RGB image of size 288, 512 pixels. The pixel values are from range [0, 255].
 
 ## Rewards
 
-* +0.1 - **every frame it stays alive**
+* +0.01 - **every frame it stays alive**
 * +1.0 - **successfully passing a pipe**
-* -1.0 - **dying**
+* -2.0 - **dying**
 
 <br>
 
@@ -53,10 +53,6 @@ The RGB image of size 288, 512 pixels. The pixel values are from range [0, 255].
 </p>
 
 ## Installation
-
-To install `flappy-bird-gymnasium`, simply run the following command:
-
-    $ pip install flappy-bird-gymnasium
     
 ## Usage
 
