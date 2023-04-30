@@ -178,7 +178,8 @@ class FlappyBirdLogic:
     def check_crash(self) -> bool:
         """Returns True if player collides with the ground (base) or a pipe."""
         # if player crashes into ground
-        if self.player_y + PLAYER_HEIGHT >= self.base_y - 1:
+        # update: also check if player hit ceiling
+        if self.player_y + PLAYER_HEIGHT >= self.base_y - 1 or self.player_y <= 0:
             return True
         else:
             player_rect = pygame.Rect(
@@ -213,7 +214,7 @@ class FlappyBirdLogic:
         Returns:
             `True` if the player is alive and `False` otherwise.
         """
-        reward = 0.1  # reward for staying alive
+        reward = 0.01  # reward for staying alive
 
         self.sound_cache = None
         if action == FlappyBirdLogic.Actions.FLAP:
@@ -225,7 +226,8 @@ class FlappyBirdLogic:
         self.last_action = action
         if self.check_crash():
             self.sound_cache = "hit"
-            reward = -1  # reward for dying
+                         # update: change -1 to -2
+            reward = -2  # reward for dying
             return reward, False
 
         # check for score
