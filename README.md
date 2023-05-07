@@ -4,8 +4,8 @@
 
 This repository contains the implementation of two Gymnasium environments for
 the Flappy Bird game. The implementation of the game's logic and graphics was
-based on the [flappy-bird-gym](https://github.com/Talendar/flappy-bird-gym) project, by
-[@Talendar](https://github.com/Talendar). 
+based on the [flappy-bird-gymnasium](https://github.com/markub3327/flappy-bird-gymnasium) project, by
+[@markub3327](https://github.com/markub3327). 
 
 ## State space
 
@@ -38,9 +38,9 @@ The RGB image of size 288, 512 pixels. The pixel values are from range [0, 255].
 
 ## Rewards
 
-* +0.01 - **every frame it stays alive**
-* +1.0 - **successfully passing a pipe**
-* -2.0 - **dying**
+* +0 - **every frame it stays alive**
+* +5.0 - **successfully passing a pipe**
+* -2.0 - **dying** (hit pipe, floor, or ceiling)
 
 <br>
 
